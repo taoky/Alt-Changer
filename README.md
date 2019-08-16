@@ -12,6 +12,14 @@ Alt Changer 是在 2019 年微软学生夏令营第 07 组在 hackathon 环节�
 
 我们想做的事情，就是结合这样相关的技术，通过开发浏览器的扩展，让视障患者在不改变自己日常使用的浏览器、屏幕阅读器等的基础上，能够获知图片的内容，更加接近健全者浏览网页的体验。
 
+## 成员
+
+- 张博涵
+- 张皓淇
+- 吴慧蕾
+- 陶柯宇
+- 潘博
+
 ## Demo 的技术细节
 
 我们编写了一个油猴脚本 ([Alt-Changer.js](https://github.com/taoky/Alt-Changer/blob/master/Alt-Changer.js))，在加载网页完成后它会被执行，提取页面中所有的图片标签，将图片的 URL 提交到 [Azure 认知服务中的图像说明](https://docs.microsoft.com/zh-cn/azure/cognitive-services/computer-vision/concept-describing-images)中。如果它所返回的 confidence 超过阈值，流程结束，否则会再将图片 URL 提交到 [Bing 的图像搜索](https://docs.microsoft.com/zh-cn/azure/cognitive-services/bing-image-search)[^1]中，根据返回的内容修改标签的 alt 属性。
